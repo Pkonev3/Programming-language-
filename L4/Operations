@@ -1,0 +1,30 @@
+public class operations {
+
+	public static void main(String[] args) {
+	
+		float num = (float) (Math.random()*100) ;
+		System.out.println(Math.sin(num));
+		System.out.println(Math.cos(num));
+		System.out.println(Math.tan(num));
+		System.out.println(Math.sin(1/Math.tan(num));
+		System.out.println(Math.sqrt(num));
+		System.out.println(Math.pow(num,2));
+		System.out.println(Math.pow(num,3));
+		System.out.println(Math.ceil(num));
+		System.out.println(Math.floor(num));
+		
+		float r = num;
+		
+		float area =(float) (Math.pow(r,2) * Math.PI);
+		
+		
+				
+		System.out.println("aRea: " + area );
+		
+		System.out.println("PI" + Math.PI);
+		System.out.println("e" + Math.E);
+		
+		
+	
+
+}
