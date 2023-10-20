@@ -1,0 +1,28 @@
+class Strings {
+
+    public static void main(String[] args) {
+    	
+        String original = "Computer";
+        System.out.println("Original word: " + original);
+        System.out.println("Length of the word: " + original.length());
+        int middleIndex = original.length() / 2;
+        char firstChar = original.charAt(0);
+        char middleChar = original.charAt(middleIndex);
+        char lastChar = original.charAt(original.length() - 1);
+        System.out.println("First letter: " + firstChar);
+        System.out.println("Middle letter: " + middleChar);
+        System.out.println("Last letter: " + lastChar);
+        boolean startsWithCom = original.startsWith("Com");
+        System.out.println("Starts with 'Com': " + startsWithCom);
+        boolean endsWithIon = original.endsWith("ion");
+        System.out.println("Ends with 'ion': " + endsWithIon);
+        String firstTwoLetters = original.substring(0, 2);
+        String swappedWord = original.replace('e', 'o');
+        String replacedWord = original.replace("Compu", "Calcula");
+        System.out.println("First two letters: " + firstTwoLetters);
+        System.out.println("Word with 'e' swapped with 'o': " + swappedWord);
+        System.out.println("Word with 'Compu' replaced with 'Calcula': " + replacedWord);
+
+    }
+ }
+
