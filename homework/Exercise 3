@@ -1,0 +1,32 @@
+public class StringManipulation {
+    public static void main(String[] args) {
+        String inputString = "Hello, World";
+
+        char firstCharacter = inputString.charAt(0);
+        char lastCharacter = inputString.charAt(inputString.length() - 1);
+
+        char middleCharacter;
+        int length = inputString.length();
+        if (length % 2 == 1) {
+            middleCharacter = inputString.charAt(length / 2);
+        } else {
+            middleCharacter = inputString.charAt(length / 2 - 1);
+        }
+
+        int sumOfCharacters = firstCharacter + lastCharacter + middleCharacter;
+
+        char biggestChar = firstCharacter;
+        if (lastCharacter > biggestChar) {
+            biggestChar = lastCharacter;
+        }
+        if (middleCharacter > biggestChar) {
+            biggestChar = middleCharacter;
+        }
+
+        System.out.println("First Character: " + firstCharacter);
+        System.out.println("Last Character: " + lastCharacter);
+        System.out.println("Middle Character: " + middleCharacter);
+        System.out.println("Sum of Characters: " + sumOfCharacters);
+        System.out.println("Character with the Biggest Code: " + biggestChar);
+    }
+}
