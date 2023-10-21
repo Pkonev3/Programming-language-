@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class SalaryCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter employee name: ");
+        String employeeName = scanner.nextLine();
+        System.out.print("Enter gross salary: ");
+        double grossSalary = scanner.nextDouble();
+
+        double stateTaxRate = 0.284;
+        double stateTaxes = grossSalary * stateTaxRate;
+
+        double personalTax = 0;
+        double netSalary = 0;
+
+        if (grossSalary - stateTaxes - 7000 > 0) {
+            personalTax = 0.10 * (grossSalary - stateTaxes - 7000);
+        }
+
+        netSalary = grossSalary - stateTaxes - personalTax;
+
+        stateTaxes = Math.round(stateTaxes);
+        personalTax = Math.round(personalTax);
+        netSalary = Math.round(netSalary);
+
+        System.out.println("Employee Name: " + employeeName);
+        System.out.println("State Taxes: " + stateTaxes);
+        System.out.println("Personal Tax: " + personalTax);
+        System.out.println("Net Salary: " + netSalary);
+
+        scanner.close();
+    }
+}
